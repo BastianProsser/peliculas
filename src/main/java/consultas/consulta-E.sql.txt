@@ -1,0 +1,4 @@
+Select usuarios.nombreusuario, peliculas.titulo, calificaciones.resena
+FROM calificaciones JOIN peliculas ON calificaciones.id_pelicula = peliculas.id_pelicula
+JOIN usuarios ON calificaciones.id_usuario = usuarios.id_usuario
+WHERE calificaciones.id_usuario = 2;

@@ -1,0 +1,5 @@
+
+Select generos.nombre_genero, COUNT(peliculas.id_pelicula) as numero_peliculas 
+FROM generos JOIN peliculas ON generos.id_genero = peliculas.id_genero
+GROUP BY generos.nombre_genero
+ORDER BY numero_peliculas DESC;

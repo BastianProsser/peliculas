@@ -1,0 +1,4 @@
+Select peliculas.titulo, peliculas.anio_lanzamiento, generos.nombre_genero
+FROM peliculas
+JOIN generos ON generos.id_genero=peliculas.id_genero;
+

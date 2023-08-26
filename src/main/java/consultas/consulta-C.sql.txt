@@ -1,0 +1,3 @@
+Select peliculas.titulo, AVG(calificaciones.puntuacion) 
+FROM peliculas JOIN calificaciones ON peliculas.id_pelicula = calificaciones.id_pelicula
+WHERE peliculas.titulo = "John Wick";
