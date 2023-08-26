@@ -4,5 +4,8 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class PeliculasController {
-
+	
+	@Autowired
+	private
+	
 }

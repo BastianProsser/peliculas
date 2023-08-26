@@ -5,12 +5,11 @@ import java.util.List;
 import com.cinema.peliculas.modelos.Peliculas;
 
 public interface PeliculasService {
+	List<Peliculas> getMovies();
 	
-	   Peliculas getMovieByName(String nombre);
+	Peliculas getMovieByName(String nombre);
 	   
-	   Peliculas getMovieById(Integer id);
-
-	   List<Peliculas> getMovies();
+	Peliculas getMovieById(Integer id);
 
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import com.cinema.peliculas.modelos.Usuarios;
 
 public interface UsuariosService {
+    List<Usuarios> getUsers();
 
     Usuarios getUserById(Integer id);
 
@@ -12,9 +13,7 @@ public interface UsuariosService {
 
     Usuarios SaveUser(Usuarios usuario);
 
-    void eliminarUsuario(Long id);
+    void eliminarUsuario(Integer id);
 
-    List<Usuarios> getUsers();
-
-    Usuarios Login(String nombre, String contrasena);
+    Usuarios login(String nombre, String contrasena);
 }
