@@ -2,14 +2,14 @@ package com.cinema.peliculas.servicio;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.cinema.peliculas.modelos.Peliculas;
 
+@Service
 public interface PeliculasService {
-	List<Peliculas> getMovies();
-	
-	Peliculas getMovieByName(String nombre);
-	   
-	Peliculas getMovieById(Integer id);
+	Iterable<Peliculas> getMovies();
 
+	Peliculas getMovieById(Integer id);
 
 }

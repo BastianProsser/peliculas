@@ -1,9 +1,9 @@
 package com.cinema.peliculas.repositorio;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.cinema.peliculas.modelos.Calificaciones;
 
-public interface CalificacionRepository  extends JpaRepository<Calificaciones, Integer>{
+public interface CalificacionRepository  extends CrudRepository<Calificaciones, Integer>{
 
 }

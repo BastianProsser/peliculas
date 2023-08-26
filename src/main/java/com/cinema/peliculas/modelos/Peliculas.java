@@ -1,10 +1,11 @@
 package com.cinema.peliculas.modelos;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,12 +14,14 @@ public class Peliculas {
 	@Id
 	private Integer id_pelicula;
 	
+	@Column(name="titulo")
 	private String titulo;
 	
+	@Column(name="anio_lanzamiento")
 	private int anio_lanzamiento;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_genero")
+	@OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_genero", referencedColumnName="id_genero", insertable=false, updatable=false)
     private Generos genero;
 
 	public Peliculas(Integer id_pelicula, String titulo, int anio_lanzamiento, Generos genero) {

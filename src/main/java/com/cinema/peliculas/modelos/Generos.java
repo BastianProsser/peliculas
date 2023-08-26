@@ -1,7 +1,7 @@
 package com.cinema.peliculas.modelos;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -12,6 +12,7 @@ public class Generos {
 	@Id
 	private Integer id_genero;
 	
+	@Column(name="nombre_genero")
 	private String nombre_genero;
 
 	public Generos(Integer id_genero, String nombre_genero) {

@@ -1,13 +1,15 @@
 package com.cinema.peliculas.repositorio;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.cinema.peliculas.modelos.Usuarios;
 
-public interface UsuariosRepository  extends JpaRepository<Usuarios, Integer> {
+public interface UsuariosRepository  extends CrudRepository<Usuarios, Integer> {
 
-    Usuarios findByNombreusuario(String nombreusuario);
-
-    Usuarios findByNombreusuarioContrasena(String nombreusuario, String contrasena);
+	/*
+	 * Usuarios findByUsername(String nombreusuario);
+	 * 
+	 * Usuarios findByUserData(String nombreusuario, String contrasena);
+	 */
 
 }

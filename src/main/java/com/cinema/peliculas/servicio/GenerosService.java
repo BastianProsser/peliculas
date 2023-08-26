@@ -2,13 +2,15 @@ package com.cinema.peliculas.servicio;
 
 import java.util.List;
 
-import com.cinema.peliculas.modelos.Generos;
+import org.springframework.stereotype.Service;
 
+import com.cinema.peliculas.modelos.Generos;
+@Service
 public interface GenerosService {
 	
-    List<Generos> getGenres();
+    Iterable<Generos> getGenres();
     
-	Generos getGenreById(Integer id);
+    Generos getGenreById(Integer id);
    
 
 }

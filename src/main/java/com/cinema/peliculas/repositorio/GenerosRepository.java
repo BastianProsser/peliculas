@@ -1,9 +1,9 @@
 package com.cinema.peliculas.repositorio;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.cinema.peliculas.modelos.Generos;
 
-public interface GenerosRepository extends JpaRepository<Generos, Integer>{
+public interface GenerosRepository extends CrudRepository<Generos, Integer>{
 
 }
